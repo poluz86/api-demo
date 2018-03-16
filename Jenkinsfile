@@ -13,7 +13,9 @@ node {
     stage('Smoke Test') { echo 'Smoke Test' }
 
     stage('Api Test') { 
-        echo 'Api Test' 
+        echo 'Api Test'
+        bat 'mvn clean test' 
+        bat 'dir'
     }
 
     stage('Performance Test') { echo 'Performance Test' }
