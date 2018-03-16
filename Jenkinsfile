@@ -5,7 +5,7 @@ node {
         git poll: true, url: 'https://github.com/poluz86/api-demo.git'
         bat 'dir'
     }
-    stage('Compile') { echo 'Compile' }
+    stage('Compile') { bat 'sleep 4' }
     stage('Unit Test') { echo 'Unit Test' }
     stage('Code Analysis') { echo 'Code Analysis' }
     stage('Packaging') { echo 'Packaging' }
