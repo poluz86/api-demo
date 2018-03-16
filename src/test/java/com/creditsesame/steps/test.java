@@ -37,7 +37,7 @@ public class test {
                 .header("X-cs-session-id","QA")
                 .body("{\"username\":\""+ username +"\",\""+ password +"\":\"password\",\"apiKey\":\""+ apiKey +"\"}")
                 .when().post("/api/v1/sessions")
-                .then().statusCode(201)
+                .then().statusCode(401)
                 .and().time(lessThan(1000L));
     }
 
@@ -67,6 +67,6 @@ public class test {
                 .body(request)
                 .when().post("/api/v1/sessions")
                 .then().statusCode(201)
-                .and().time(lessThan(3000L));
+                .and().time(lessThan(600L));
     }
 }
