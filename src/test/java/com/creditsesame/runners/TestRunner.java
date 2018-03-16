@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
                 "json:target/cucumber-report.json"
         },
         glue = {"com/creditsesame/steps"},
-        features = "src/test/java/com/creditsesame/histories/format3.feature",
+        features = "src/test/java/com/creditsesame/histories",
         tags = {"@test8"}
 )
 public class TestRunner {
