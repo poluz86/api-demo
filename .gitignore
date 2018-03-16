@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+_book/
+.idea/
+*.iml
+cucumber_manyrepo_id_rsa
+cucumber_manyrepo_id_rsa.pub
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pn.xml
+buildNumber.properties
+.mvn/timing.properties
