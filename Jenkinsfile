@@ -13,9 +13,15 @@ node {
     stage('Smoke Test') { echo 'Smoke Test' }
 
     stage('Api Test') { 
-        echo 'Api Test'
-        bat 'mvn clean test' 
-        bat 'dir'
+        try {
+            bat 'mvn clean test' 
+            bat 'dir'
+        }catch(err) {
+
+        } finally {
+            cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/', sortingMethod: 'ALPHABETICAL'
+        }
+
     }
 
     stage('Performance Test') { echo 'Performance Test' }
