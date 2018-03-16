@@ -6,11 +6,11 @@ node {
         bat 'dir'
     }
     stage('Compile') { sleep(4) }
-    stage('Unit Test') { echo 'Unit Test' }
-    stage('Code Analysis') { echo 'Code Analysis' }
-    stage('Packaging') { echo 'Packaging' }
-    stage('Testing Deploy') { echo 'Testing Deploy' }
-    stage('Smoke Test') { echo 'Smoke Test' }
+    stage('Unit Test') { sleep(5) }
+    stage('Code Analysis') { sleep(4) }
+    stage('Packaging') { sleep(2) }
+    stage('Testing Deploy') { sleep(4) }
+    stage('Smoke Test') { sleep(4) }
 
     stage('Api Test') { 
         try {
@@ -24,7 +24,7 @@ node {
 
     }
 
-    stage('Performance Test') { echo 'Performance Test' }
-    stage('CleanUp Environment') { echo 'CleanUp Environment' }
-    stage('Promote') { echo 'Promote' }
+    stage('Performance Test') { sleep(1) }
+    stage('CleanUp Environment') { sleep(3) }
+    stage('Promote') { sleep(1) }
 }
