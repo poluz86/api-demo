@@ -3,7 +3,7 @@ node {
     stage('Checkout') { 
         echo 'Checkout' 
         git poll: true, url: 'https://github.com/poluz86/api-demo.git'
-        sh 'ls -l'
+        bat 'dir'
     }
     stage('Compile') { echo 'Compile' }
     stage('Unit Test') { echo 'Unit Test' }
