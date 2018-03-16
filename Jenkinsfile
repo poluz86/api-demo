@@ -1,6 +1,9 @@
 node {
 
-    stage('Checkout') { echo 'Checkout' }
+    stage('Checkout') { 
+        echo 'Checkout' 
+        git poll: true, url: 'https://github.com/poluz86/api-demo.git'
+    }
     stage('Compile') { echo 'Compile' }
     stage('Unit Test') { echo 'Unit Test' }
     stage('Code Analysis') { echo 'Code Analysis' }
@@ -13,6 +16,6 @@ node {
     }
 
     stage('Performance Test') { echo 'Performance Test' }
-    stage('CleanUp Environment') { eho 'CleanUp Environment' }
+    stage('CleanUp Environment') { echo 'CleanUp Environment' }
     stage('Promote') { echo 'Promote' }
 }
